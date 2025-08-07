@@ -1,0 +1,110 @@
+@font-face {
+      font-family: "nekst";
+      font-style: normal;
+      font-weight: 300;
+      src: url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-Light.woff2") format("woff2"),
+           url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-Light.woff") format("woff");
+    }
+    @font-face {
+      font-family: "nekst";
+      font-style: normal;
+      font-weight: 400;
+      src: url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-Regular.woff2") format("woff2"),
+           url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-Regular.woff") format("woff");
+    }
+    @font-face {
+      font-family: "nekst";
+      font-style: normal;
+      font-weight: 500;
+      src: url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-Medium.woff2") format("woff2"),
+           url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-Medium.woff") format("woff");
+    }
+    @font-face {
+      font-family: "nekst";
+      font-style: normal;
+      font-weight: 600;
+      src: url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-SemiBold.woff2") format("woff2"),
+           url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-SemiBold.woff") format("woff");
+    }
+    @font-face {
+      font-family: "nekst";
+      font-style: normal;
+      font-weight: 700;
+      src: url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-Bold.woff2") format("woff2"),
+           url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-Bold.woff") format("woff");
+    }
+    @font-face {
+      font-family: "nekst";
+      font-style: normal;
+      font-weight: 900;
+      src: url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-Black.woff2") format("woff2"),
+           url("https://commonateraassets.azureedge.net/academy/fonts/nekst/Nekst-Black.woff") format("woff");
+    }
+
+    body {
+      font-family: "nekst", sans-serif;
+      background: #000;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card-grid .row {
+      display: contents;
+    }
+
+    .card {
+      position: relative;
+      padding: 20px;
+      background: linear-gradient(90deg, #B28DE1 6.38%, #FF176B 128.01%);
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card.locked {
+      background: #444;
+      cursor: default;
+      pointer-events: none;
+      color: #999;
+    }
+
+    .card h2 {
+      margin: 10px 0;
+    }
+
+    .card .icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
